@@ -1,0 +1,490 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: wheat;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(223, 220, 215); 
+    color: white;
+}
+
+/* Navigation Links */
+.header-right ul {
+    list-style: none;
+    display: flex; /* Display links in a horizontal row */
+    justify-content: center; /* Center the links */
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Add spacing between links */
+}
+
+.header-right ul li {
+    margin: 0 15px;
+}
+
+.header-right ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.header-right ul li a:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
+
+/* About Me Section */
+#about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: wheat;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 80%; /* Circular image */
+    border: 3px solid rgb(146, 128, 146); /* Border color */
+    margin-bottom: 20px;
+}
+
+/* Lightbox Styling */
+.lightbox {
+    display: inline-block;
+    position: relative;
+}
+
+.lightbox img {
+    width: 100%;
+    max-width: 300px; /* Adjust the size of the image in the section */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lightbox img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fullscreen Lightbox */
+.lightbox:focus {
+    outline: none;
+}
+
+.lightbox:focus img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.5); /* Enlarge the image */
+    z-index: 1000;
+    max-width: 90%; /* Ensure it fits within the viewport */
+    max-height: 90%; /* Ensure it fits within the viewport */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+/* Background Overlay */
+.lightbox:focus::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 999;
+}
+
+#about h1 {
+    font-size: 28px;
+    color: #5608a0; /* Purple text */
+    margin-bottom: 10px;
+    font-family:  script;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#skills h1 {
+    font-size: 32px;
+    color: #5608a0; /* Purple heading color */
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.skill p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Info Section */
+#contact-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info h2 {
+    font-size: 28px;
+    color: #5608a0; /* Purple heading color */
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-list li a:hover {
+    color: #5608a0; /* Purple hover effect */
+}
+
+.contact-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* About Me Section */
+/* General Section Styling */
+section {
+    padding: 40px 20px;
+    margin: 20px auto; /* Increase spacing between sections */
+    max-width: 800px;
+    background-color: wheat; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+}
+
+/* Education Section */
+#Education {
+    padding: 40px 20px;
+    background-color: white; /* Same background color as About Me */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#Education h1 {
+    font-size: 32px;
+    color: #5608a0; /* Purple heading color */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Elegant font */
+}
+
+#Education p {
+    font-size: 18px;
+    line-height: 1.8; /* Increase line height for readability */
+    color: #333;
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* Contact Information Section */
+#Contact\ Infomation {
+    padding: 40px 20px;
+    background-color: white; /* Same background color as About Me */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#Contact\ Infomation h1 {
+    font-size: 32px;
+    color: #5608a0; /* Purple heading color */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Elegant font */
+}
+
+#Contact\ Infomation p {
+    font-size: 18px;
+    line-height: 1.8; /* Increase line height for readability */
+    color: #333;
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+#about {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #f4f4f9, #eaeaea); /* Add a subtle gradient */
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about h1 {
+    font-size: 32px;
+    color: #5608a0; /* Purple heading color */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Add a more elegant font */
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.8; /* Increase line height for better readability */
+    color: #333;
+    text-align: justify; /* Justify text for a cleaner look */
+}
+
+/* CV Download Button */
+.cv-button {
+    display: inline-block;
+    margin: 20px auto; /* Center the button and add spacing */
+    padding: 12px 25px; /* Adjust padding for a larger button */
+    background-color: #5608a0; /* Purple background */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    text-align: center;
+}
+
+.cv-button:hover {
+    background-color: #ffcc00; /* Highlight color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Center the CV Button in the Education Section */
+#Education .cv-button {
+    display: block; /* Ensure the button is treated as a block element */
+    text-align: center; /* Center-align the button */
+}
+
+/* Gallery Section */
+#gallery {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff; /* White background for contrast */
+    margin: 40px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#gallery h2 {
+    font-size: 28px;
+    color: #5608a0; /* Purple heading color */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Add a more elegant font */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column size */
+    gap: 20px; /* Spacing between images */
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image fits without distortion */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* More Projects Section */
+#more-projects {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#more-projects h2 {
+    font-size: 28px;
+    color: #5608a0; /* Purple heading color */
+    margin-bottom: 20px;
+}
+
+#more-projects p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.github-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5608a0; /* Purple background */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.github-link:hover {
+    background-color: #ffcc00; /* Highlight color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Project Card Styling */
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center-align content inside the card */
+    padding: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 300px; /* Make the image fill the card width */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensure the image fits without distortion */
+    border-bottom: 2px solid #f4f4f9; /* Optional: Add a border below the image */
+    transition: transform 0.3s ease; /* Add a smooth zoom effect */
+}
+
+.project-card img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* shadow on hover */
+}
+
+.project-card h2 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #666;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+/* Project Link Button */
+.project-card .project-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 16px;
+    background-color: #5608a0;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .project-link:hover {
+    background-color: #ffcc00; /* Highlight color on hover */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
